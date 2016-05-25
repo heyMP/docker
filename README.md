@@ -10,13 +10,13 @@ These are the instructions for setting up [Drupal Docker](https://hub.docker.com
 
 `$ docker-machine create --driver virtualbox docker-vm`
 
-Expected output:
+Add the output of that command to your `.bashrc` file.  Should look something like this:
 
 ```
   # Docker
   export DOCKER_TLS_VERIFY="1"
   export DOCKER_HOST="tcp://192.168.99.100:2376"
-  export DOCKER_CERT_PATH="/Users/scienceonlineed/.docker/machine/machines/docker-vm"
+  export DOCKER_CERT_PATH="/Users/yourusername/.docker/machine/machines/docker-vm"
   export DOCKER_MACHINE_NAME="docker-vm"
 ```
 
