@@ -20,3 +20,9 @@ Add the output of that command to your `.bashrc` file.  Should look something li
   export DOCKER_MACHINE_NAME="docker-vm"
 ```
 
+### Verify install
+
+Run `docker-machine ls` to ensure you see the newley created `docker-vm`.
+
+
+
