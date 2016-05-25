@@ -41,4 +41,32 @@ Check and see what the IP address is for your server
 Visit the site in your browser http://yourIP:8080
 
 
+## Create Docker Compose file
+
+This will look at your active processes and create a config file.
+
+`$ docker-compose config`
+
+Expected output:
+
+```
+networks: {}
+services:
+  drupal:
+    image: drupal
+    network_mode: bridge
+    ports:
+    - 8080:80
+  drupaldb:
+    environment:
+      MYSQL_DATABASE: druapl8
+      MYSQL_ROOT_PASSWORD: root
+    image: mysql
+    network_mode: bridge
+version: '2.0'
+volumes: {}
+```
+ 
+Save the output to a file called `docker-compose.yml`
+
 
