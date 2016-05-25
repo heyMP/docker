@@ -24,5 +24,21 @@ Add the output of that command to your `.bashrc` file.  Should look something li
 
 Run `$ docker-machine ls` to ensure you see the newley created `docker-vm`.
 
+## Setup Drupal process
+
+`$ docker run --name some-drupal -p 8080:80 -d drupal`
+
+## Setup Mysql
+
+`$ docker run --name some-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=drupal8 -d mysql`
+
+## Access Site
+
+Check and see what the IP address is for your server
+
+`$ docker-machine ls`
+
+Visit the site in your browser http://yourIP:8080
+
 
 
