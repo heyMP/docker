@@ -69,4 +69,21 @@ volumes: {}
  
 Save the output to a file called `docker-compose.yml`
 
+## Kitematic
+
+### Failed install
+
+If the machine refuses to start, it might mean that the certs are bad. Example of a bad cert:
+
+```
+default     *        virtualbox   Running   tcp://192.168.99.100:2376           Unknown   Unable to query docker version: Get https://192.168.99.100:2376/v1.15/version: x509: certificate is valid for 192.168.99.101, not 192.168.99.10
+```
+
+To regenerate cert:
+
+```
+docker-machine regenerate-certs default
+```
+
+Restart Kitematic
 
