@@ -87,3 +87,12 @@ docker-machine regenerate-certs default
 
 Restart Kitematic
 
+## Normal Development Setup
+
+Create Container
+
+docker run -dP -e TERM --name <container-name> -v <file-location> <image-name>
+
+Create bash or Zsh container for editing files
+
+docker run -it --rm -e TERM --volumes-from <container-name> <image-name> zsh
